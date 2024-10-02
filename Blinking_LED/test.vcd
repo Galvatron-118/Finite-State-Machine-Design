@@ -1,0 +1,720 @@
+$date
+	Thu Sep 19 23:00:02 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module blinking_light_top_tb $end
+$var wire 1 ! light $end
+$var reg 1 " clk $end
+$var reg 1 # en $end
+$var reg 1 $ reset $end
+$var reg 1 % start $end
+$scope module DUT $end
+$var wire 1 " clk $end
+$var wire 1 # en $end
+$var wire 1 $ reset $end
+$var wire 1 % start $end
+$var wire 1 ! light $end
+$var wire 1 & datapath_out $end
+$var wire 4 ' datapath_in2 [3:0] $end
+$var wire 4 ( datapath_in1 [3:0] $end
+$var wire 4 ) count [3:0] $end
+$var wire 1 * clear $end
+$scope module controller1 $end
+$var wire 1 " clk $end
+$var wire 4 + datapath_in1 [3:0] $end
+$var wire 1 # en $end
+$var wire 1 $ reset $end
+$var wire 1 % start $end
+$var wire 1 & datapath_out $end
+$var wire 4 , datapath_in2 [3:0] $end
+$var wire 4 - count [3:0] $end
+$var parameter 4 . ERROR $end
+$var parameter 4 / OFF $end
+$var parameter 4 0 ON $end
+$var parameter 4 1 STOP $end
+$var reg 1 * clear $end
+$var reg 1 ! light $end
+$var reg 4 2 nstate [3:0] $end
+$var reg 4 3 pstate [3:0] $end
+$scope begin NSOL $end
+$scope begin NSL $end
+$upscope $end
+$scope begin OL $end
+$upscope $end
+$upscope $end
+$scope begin PSR $end
+$upscope $end
+$upscope $end
+$scope module datapath1 $end
+$var wire 4 4 datapath_in1 [3:0] $end
+$var wire 4 5 datapath_in2 [3:0] $end
+$var wire 1 & datapath_out $end
+$upscope $end
+$scope module timer1 $end
+$var wire 1 * clear $end
+$var wire 1 " clk $end
+$var wire 1 $ reset $end
+$var reg 4 6 count [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b0 1
+b1 0
+b10 /
+b11 .
+$end
+#0
+$dumpvars
+bx 6
+b0xxx 5
+bx 4
+bx 3
+b11 2
+bx -
+b0xxx ,
+bx +
+x*
+bx )
+bx (
+b0xxx '
+x&
+0%
+0$
+0#
+0"
+x!
+$end
+#5
+0&
+b0 '
+b0 ,
+b0 5
+b11 3
+b11 2
+1"
+#10
+1*
+0!
+b0 2
+b0 3
+1$
+0"
+#15
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+1"
+#20
+b1 2
+1#
+1%
+0$
+0"
+#25
+0*
+1!
+b101 '
+b101 ,
+b101 5
+b1 3
+b1 2
+1"
+#30
+0"
+#35
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#40
+0"
+#45
+b10 (
+b10 +
+b10 4
+b10 )
+b10 -
+b10 6
+1"
+#50
+0"
+#55
+b11 (
+b11 +
+b11 4
+b11 )
+b11 -
+b11 6
+1"
+#60
+0"
+#65
+1*
+b10 2
+1&
+b100 (
+b100 +
+b100 4
+b100 )
+b100 -
+b100 6
+1"
+#70
+b10 2
+0"
+#75
+b111 '
+b111 ,
+b111 5
+0*
+0!
+b10 3
+0&
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+b10 2
+1"
+#80
+0"
+#85
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#90
+0"
+#95
+b10 (
+b10 +
+b10 4
+b10 )
+b10 -
+b10 6
+1"
+#100
+0"
+#105
+b11 (
+b11 +
+b11 4
+b11 )
+b11 -
+b11 6
+1"
+#110
+0"
+#115
+b100 (
+b100 +
+b100 4
+b100 )
+b100 -
+b100 6
+1"
+#120
+0"
+#125
+b101 (
+b101 +
+b101 4
+b101 )
+b101 -
+b101 6
+1"
+#130
+0"
+#135
+1*
+b1 2
+1&
+b110 (
+b110 +
+b110 4
+b110 )
+b110 -
+b110 6
+1"
+#140
+b1 2
+0"
+#145
+b101 '
+b101 ,
+b101 5
+0*
+1!
+b1 3
+0&
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+b1 2
+1"
+#150
+0"
+#155
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#160
+0"
+#165
+b10 (
+b10 +
+b10 4
+b10 )
+b10 -
+b10 6
+1"
+#170
+0"
+#175
+b11 (
+b11 +
+b11 4
+b11 )
+b11 -
+b11 6
+1"
+#180
+0"
+#185
+1*
+b10 2
+1&
+b100 (
+b100 +
+b100 4
+b100 )
+b100 -
+b100 6
+1"
+#190
+b10 2
+0"
+#195
+b111 '
+b111 ,
+b111 5
+0*
+0!
+b10 3
+0&
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+b10 2
+1"
+#200
+0"
+#205
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#210
+0"
+#215
+b10 (
+b10 +
+b10 4
+b10 )
+b10 -
+b10 6
+1"
+#220
+0"
+#225
+b11 (
+b11 +
+b11 4
+b11 )
+b11 -
+b11 6
+1"
+#230
+0"
+#235
+b100 (
+b100 +
+b100 4
+b100 )
+b100 -
+b100 6
+1"
+#240
+0"
+#245
+b101 (
+b101 +
+b101 4
+b101 )
+b101 -
+b101 6
+1"
+#250
+0"
+#255
+1*
+b1 2
+1&
+b110 (
+b110 +
+b110 4
+b110 )
+b110 -
+b110 6
+1"
+#260
+b1 2
+0"
+#265
+b101 '
+b101 ,
+b101 5
+0*
+1!
+b1 3
+0&
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+b1 2
+1"
+#270
+0"
+#275
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#280
+0"
+#285
+b10 (
+b10 +
+b10 4
+b10 )
+b10 -
+b10 6
+1"
+#290
+0"
+#295
+b11 (
+b11 +
+b11 4
+b11 )
+b11 -
+b11 6
+1"
+#300
+0"
+#305
+1*
+b10 2
+1&
+b100 (
+b100 +
+b100 4
+b100 )
+b100 -
+b100 6
+1"
+#310
+b10 2
+0"
+#315
+b111 '
+b111 ,
+b111 5
+0*
+0!
+b10 3
+0&
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+b10 2
+1"
+#320
+0"
+#325
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#330
+0"
+#335
+b10 (
+b10 +
+b10 4
+b10 )
+b10 -
+b10 6
+1"
+#340
+0"
+#345
+b11 (
+b11 +
+b11 4
+b11 )
+b11 -
+b11 6
+1"
+#350
+0"
+#355
+b100 (
+b100 +
+b100 4
+b100 )
+b100 -
+b100 6
+1"
+#360
+0"
+#365
+b101 (
+b101 +
+b101 4
+b101 )
+b101 -
+b101 6
+1"
+#370
+0"
+#375
+1*
+b1 2
+1&
+b110 (
+b110 +
+b110 4
+b110 )
+b110 -
+b110 6
+1"
+#380
+b1 2
+0"
+#385
+b101 '
+b101 ,
+b101 5
+0*
+1!
+b1 3
+0&
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+b1 2
+1"
+#390
+0"
+#395
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#400
+0"
+#405
+b10 (
+b10 +
+b10 4
+b10 )
+b10 -
+b10 6
+1"
+#410
+0"
+#415
+b11 (
+b11 +
+b11 4
+b11 )
+b11 -
+b11 6
+1"
+#420
+0"
+#425
+1*
+b10 2
+1&
+b100 (
+b100 +
+b100 4
+b100 )
+b100 -
+b100 6
+1"
+#430
+b10 2
+0"
+#435
+b111 '
+b111 ,
+b111 5
+0*
+0!
+b10 3
+0&
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+b10 2
+1"
+#440
+0"
+#445
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#450
+0"
+#455
+b10 (
+b10 +
+b10 4
+b10 )
+b10 -
+b10 6
+1"
+#460
+0"
+#465
+b11 (
+b11 +
+b11 4
+b11 )
+b11 -
+b11 6
+1"
+#470
+0"
+#475
+b100 (
+b100 +
+b100 4
+b100 )
+b100 -
+b100 6
+1"
+#480
+0"
+#485
+b101 (
+b101 +
+b101 4
+b101 )
+b101 -
+b101 6
+1"
+#490
+0"
+#495
+1*
+b1 2
+1&
+b110 (
+b110 +
+b110 4
+b110 )
+b110 -
+b110 6
+1"
+#500
+b1 2
+0"
+#505
+b101 '
+b101 ,
+b101 5
+0*
+1!
+b1 3
+0&
+b0 (
+b0 +
+b0 4
+b0 )
+b0 -
+b0 6
+b1 2
+1"
+#510
+0"
+#515
+b1 (
+b1 +
+b1 4
+b1 )
+b1 -
+b1 6
+1"
+#520
+0"
