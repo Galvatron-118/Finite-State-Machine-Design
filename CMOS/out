@@ -1,0 +1,70 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000028223dd6a40 .scope module, "cmosnand_tb" "cmosnand_tb" 2 2;
+ .timescale -9 -9;
+v0000028223da2c30_0 .var "a", 0 0;
+v0000028223da2cd0_0 .var "b", 0 0;
+RS_0000028223dd7008 .resolv tri, L_0000028223e1a4d0, L_0000028223e1a5b0, L_0000028223e1a3f0;
+v0000028223da2d70_0 .net8 "f", 0 0, RS_0000028223dd7008;  3 drivers, strength-aware
+S_0000028223dd6bd0 .scope module, "cmos_nand" "cmosnand" 2 5, 3 1 0, S_0000028223dd6a40;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "f";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+L_0000028223da32f0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0000028223e1a4d0 .functor PMOS 1, L_0000028223da32f0, v0000028223da2c30_0, C4<0>, C4<0>;
+L_0000028223e1a5b0 .functor PMOS 1, L_0000028223da32f0, v0000028223da2cd0_0, C4<0>, C4<0>;
+L_0000028223e1a3f0 .functor NMOS 1, L_0000028223e1a310, v0000028223da2c30_0, C4<0>, C4<0>;
+L_0000028223dd4f60 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0000028223e1a310 .functor NMOS 1, L_0000028223dd4f60, v0000028223da2cd0_0, C4<0>, C4<0>;
+v0000028223d49260_0 .net "a", 0 0, v0000028223da2c30_0;  1 drivers
+v0000028223d4af20_0 .net "b", 0 0, v0000028223da2cd0_0;  1 drivers
+v0000028223dd6d60_0 .net8 "f", 0 0, RS_0000028223dd7008;  alias, 3 drivers, strength-aware
+v0000028223dd6e00_0 .net8 "gnd", 0 0, L_0000028223dd4f60;  1 drivers, strength-aware
+v0000028223da2af0_0 .net8 "vdd", 0 0, L_0000028223da32f0;  1 drivers, strength-aware
+v0000028223da2b90_0 .net8 "w_n", 0 0, L_0000028223e1a310;  1 drivers, strength-aware
+    .scope S_0000028223dd6a40;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "test.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000028223dd6a40 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028223da2c30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028223da2cd0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028223da2c30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028223da2cd0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028223da2c30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028223da2cd0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028223da2c30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028223da2cd0_0, 0, 1;
+    %delay 40, 0;
+    %vpi_call 2 13 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000028223dd6a40;
+T_1 ;
+    %vpi_call 2 16 "$monitor", "%2d:\011a = %b\011b = %b\011f = %b", $time, v0000028223da2c30_0, v0000028223da2cd0_0, v0000028223da2d70_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "cmosnand_tb.v";
+    "cmosnand.v";
