@@ -1,0 +1,111 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000018cacdfd3a0 .scope module, "DPRAM_tb" "DPRAM_tb" 2 2;
+ .timescale -9 -9;
+v0000018cacdfba60_0 .var "clk", 0 0;
+v0000018cacdfbb00_0 .var "d", 7 0;
+v0000018cacdfbba0_0 .net "q", 7 0, L_0000018cace34bc0;  1 drivers
+v0000018cacdfbc40_0 .var "rd_add", 9 0;
+v0000018cacdfbce0_0 .var "we", 0 0;
+v0000018cacdfbd80_0 .var "wr_add", 9 0;
+S_0000018cacdfd530 .scope module, "circ1" "DPRAM" 2 9, 3 1 0, S_0000018cacdfd3a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "we";
+    .port_info 2 /INPUT 10 "wr_add";
+    .port_info 3 /INPUT 10 "rd_add";
+    .port_info 4 /INPUT 8 "d";
+    .port_info 5 /OUTPUT 8 "q";
+P_0000018cacdf6f10 .param/l "addr_width" 0 3 4, +C4<00000000000000000000000000001010>;
+P_0000018cacdf6f48 .param/l "data_width" 0 3 3, +C4<00000000000000000000000000001000>;
+L_0000018cace34bc0 .functor BUFZ 8, v0000018cacdfa860_0, C4<00000000>, C4<00000000>, C4<00000000>;
+v0000018cacdf6cf0_0 .net "clk", 0 0, v0000018cacdfba60_0;  1 drivers
+v0000018cacdf69b0_0 .net "d", 7 0, v0000018cacdfbb00_0;  1 drivers
+v0000018cacdfa860_0 .var "data_reg", 7 0;
+v0000018cacdfd6c0_0 .net "q", 7 0, L_0000018cace34bc0;  alias, 1 drivers
+v0000018cacdfd760 .array "ram", 0 1023, 7 0;
+v0000018cacdfb880_0 .net "rd_add", 9 0, v0000018cacdfbc40_0;  1 drivers
+v0000018cacdfb920_0 .net "we", 0 0, v0000018cacdfbce0_0;  1 drivers
+v0000018cacdfb9c0_0 .net "wr_add", 9 0, v0000018cacdfbd80_0;  1 drivers
+E_0000018cace36320 .event posedge, v0000018cacdf6cf0_0;
+    .scope S_0000018cacdfd530;
+T_0 ;
+    %vpi_call 3 19 "$readmemb", "initialRAM.txt", v0000018cacdfd760 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000018cacdfd530;
+T_1 ;
+    %wait E_0000018cace36320;
+    %load/vec4 v0000018cacdfb920_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %load/vec4 v0000018cacdf69b0_0;
+    %load/vec4 v0000018cacdfb9c0_0;
+    %pad/u 12;
+    %ix/vec4 3;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0000018cacdfd760, 0, 4;
+T_1.0 ;
+    %load/vec4 v0000018cacdfb880_0;
+    %pad/u 12;
+    %ix/vec4 4;
+    %load/vec4a v0000018cacdfd760, 4;
+    %assign/vec4 v0000018cacdfa860_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0000018cacdfd3a0;
+T_2 ;
+    %load/vec4 v0000018cacdfba60_0;
+    %inv;
+    %store/vec4 v0000018cacdfba60_0, 0, 1;
+    %delay 10, 0;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0000018cacdfd3a0;
+T_3 ;
+    %vpi_call 2 18 "$dumpfile", "test.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000018cacdfd3a0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000018cacdfba60_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000018cacdfbce0_0, 0;
+    %delay 40, 0;
+    %pushi/vec4 0, 0, 10;
+    %assign/vec4 v0000018cacdfbc40_0, 0;
+    %delay 40, 0;
+    %pushi/vec4 2, 0, 10;
+    %assign/vec4 v0000018cacdfbc40_0, 0;
+    %delay 40, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000018cacdfbce0_0, 0;
+    %pushi/vec4 2, 0, 10;
+    %assign/vec4 v0000018cacdfbd80_0, 0;
+    %pushi/vec4 211, 0, 8;
+    %assign/vec4 v0000018cacdfbb00_0, 0;
+    %pushi/vec4 3, 0, 10;
+    %assign/vec4 v0000018cacdfbc40_0, 0;
+    %delay 40, 0;
+    %pushi/vec4 2, 0, 10;
+    %assign/vec4 v0000018cacdfbc40_0, 0;
+    %delay 40, 0;
+    %vpi_call 2 39 "$finish" {0 0 0};
+    %end;
+    .thread T_3;
+    .scope S_0000018cacdfd3a0;
+T_4 ;
+    %vpi_call 2 43 "$monitor", "clk = %b, we = %b, wr_add = %10b, rd_add = %10b, d = %8b, q = %8b", v0000018cacdfba60_0, v0000018cacdfbce0_0, v0000018cacdfbd80_0, v0000018cacdfbc40_0, v0000018cacdfbb00_0, v0000018cacdfbba0_0 {0 0 0};
+    %end;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "DPRAM_tb.v";
+    "DPRAM.v";
