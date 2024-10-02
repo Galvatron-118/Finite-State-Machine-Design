@@ -1,0 +1,114 @@
+$date
+	Fri Jul 12 01:01:37 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module graycounter_tb $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 4 # d [3:0] $end
+$var reg 1 $ load_en $end
+$var reg 1 % reset $end
+$scope module circ $end
+$var wire 1 " clk $end
+$var wire 4 & d [3:0] $end
+$var wire 1 $ load_en $end
+$var wire 1 % reset $end
+$var parameter 32 ' data_width $end
+$var reg 4 ( count [3:0] $end
+$var reg 4 ) q [3:0] $end
+$var reg 1 * q0 $end
+$var reg 1 + q1 $end
+$var reg 1 , q2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 '
+$end
+#0
+$dumpvars
+0,
+0+
+0*
+b0 )
+b0 (
+bx &
+1%
+0$
+bx #
+0"
+b0 !
+$end
+#10
+1"
+#20
+0%
+0"
+#30
+b1 (
+1"
+#40
+b11 #
+b11 &
+1$
+0"
+#50
+1+
+1*
+b11 (
+b11 !
+b11 )
+1"
+#60
+0$
+0"
+#70
+0*
+b100 (
+1"
+#80
+0"
+#90
+b10 !
+b10 )
+1,
+b101 (
+1"
+#100
+0"
+#110
+b110 !
+b110 )
+1*
+b110 (
+1"
+#120
+0"
+#130
+b111 !
+b111 )
+0+
+b111 (
+1"
+#140
+0,
+0*
+b0 (
+b0 !
+b0 )
+1%
+0"
+#150
+1"
+#160
+0"
+#170
+1"
+#180
+0"
