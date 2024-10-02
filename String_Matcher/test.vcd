@@ -1,0 +1,209 @@
+$date
+	Fri Sep 20 00:24:31 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module string_top_tb $end
+$var wire 1 ! y_val $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ clk $end
+$var reg 1 % reset $end
+$var reg 1 & start $end
+$scope module DUT $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ clk $end
+$var wire 4 ' datapath_in2 [3:0] $end
+$var wire 1 % reset $end
+$var wire 1 & start $end
+$var wire 1 ( x_val $end
+$var wire 1 ! y_val $end
+$var wire 1 ) datapath_out $end
+$var wire 4 * datapath_in1 [3:0] $end
+$scope module controller1 $end
+$var wire 1 $ clk $end
+$var wire 4 + datapath_in2 [3:0] $end
+$var wire 1 % reset $end
+$var wire 1 & start $end
+$var wire 1 ( x_val $end
+$var wire 1 ) datapath_out $end
+$var wire 4 , datapath_in1 [3:0] $end
+$var parameter 4 - A $end
+$var parameter 4 . B $end
+$var parameter 4 / C $end
+$var parameter 4 0 ERROR $end
+$var reg 4 1 i_nstate [3:0] $end
+$var reg 4 2 i_pstate [3:0] $end
+$var reg 4 3 nstate [3:0] $end
+$var reg 4 4 pstate [3:0] $end
+$var reg 1 ! y_val $end
+$scope begin NSOL $end
+$scope begin NSL $end
+$upscope $end
+$scope begin OL $end
+$upscope $end
+$upscope $end
+$scope begin PSR $end
+$upscope $end
+$upscope $end
+$scope module datapath1 $end
+$var wire 4 5 datapath_in1 [3:0] $end
+$var wire 4 6 datapath_in2 [3:0] $end
+$var wire 1 ) datapath_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 0
+b10 /
+b1 .
+b0 -
+$end
+#0
+$dumpvars
+b100 6
+bx 5
+bx 4
+b11 3
+bx 2
+bx 1
+bx ,
+b100 +
+bx *
+x)
+1(
+b100 '
+0&
+0%
+0$
+0#
+0"
+x!
+$end
+#5000
+b11 4
+b11 3
+1$
+#10000
+b0 1
+0!
+b0 3
+0)
+b0 *
+b0 ,
+b0 2
+b0 5
+b0 4
+1%
+0$
+#15000
+1$
+#20000
+b1 3
+1#
+1"
+1&
+0%
+0$
+#25000
+b1 1
+b1 4
+b1 3
+1$
+#30000
+0$
+#35000
+b10 1
+b1 *
+b1 ,
+b1 2
+b1 5
+1$
+#40000
+0$
+#45000
+b11 1
+b10 *
+b10 ,
+b10 2
+b10 5
+1$
+#50000
+0$
+#55000
+b100 1
+b10 3
+1)
+b11 *
+b11 ,
+b11 2
+b11 5
+1$
+#60000
+b10 3
+0$
+#65000
+b101 1
+1!
+0)
+b100 *
+b100 ,
+b100 2
+b100 5
+b10 4
+b10 3
+1$
+#70000
+0$
+#75000
+b110 1
+b101 *
+b101 ,
+b101 2
+b101 5
+1$
+#80000
+0$
+#85000
+b111 1
+b110 *
+b110 ,
+b110 2
+b110 5
+1$
+#90000
+0$
+#95000
+b1000 1
+b111 *
+b111 ,
+b111 2
+b111 5
+1$
+#100000
+0$
+#105000
+b1001 1
+b1000 *
+b1000 ,
+b1000 2
+b1000 5
+1$
+#110000
+0$
+#115000
+b1010 1
+b1001 *
+b1001 ,
+b1001 2
+b1001 5
+1$
+#120000
+0$
