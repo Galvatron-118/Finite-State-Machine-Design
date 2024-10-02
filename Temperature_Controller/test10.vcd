@@ -1,0 +1,212 @@
+$date
+	Thu Sep 19 17:14:12 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module temp_top_tb $end
+$var wire 1 ! h $end
+$var wire 1 " c $end
+$var reg 1 # clk $end
+$var reg 7 $ dt [6:0] $end
+$var reg 1 % reset $end
+$var reg 1 & start $end
+$var reg 7 ' tref [6:0] $end
+$var reg 7 ( troom [6:0] $end
+$scope module top1 $end
+$var wire 1 # clk $end
+$var wire 7 ) dt [6:0] $end
+$var wire 1 % reset $end
+$var wire 1 & start $end
+$var wire 7 * tref [6:0] $end
+$var wire 7 + troom [6:0] $end
+$var wire 1 ! h $end
+$var wire 4 , datapath_out [3:0] $end
+$var wire 7 - datapath_in3 [6:0] $end
+$var wire 7 . datapath_in2 [6:0] $end
+$var wire 7 / datapath_in1 [6:0] $end
+$var wire 1 " c $end
+$scope module comp1 $end
+$var wire 4 0 datapath_out [3:0] $end
+$var wire 7 1 datapath_in3 [6:0] $end
+$var wire 7 2 datapath_in2 [6:0] $end
+$var wire 7 3 datapath_in1 [6:0] $end
+$upscope $end
+$scope module temp1 $end
+$var wire 1 # clk $end
+$var wire 7 4 datapath_in1 [6:0] $end
+$var wire 7 5 datapath_in2 [6:0] $end
+$var wire 7 6 datapath_in3 [6:0] $end
+$var wire 4 7 datapath_out [3:0] $end
+$var wire 7 8 dt [6:0] $end
+$var wire 1 % reset $end
+$var wire 1 & start $end
+$var wire 7 9 tref [6:0] $end
+$var wire 7 : troom [6:0] $end
+$var parameter 4 ; COLD $end
+$var parameter 4 < ERROR $end
+$var parameter 4 = HOT $end
+$var parameter 4 > IDLE $end
+$var reg 1 " c $end
+$var reg 1 ! h $end
+$var reg 4 ? nstate [3:0] $end
+$var reg 4 @ pstate [3:0] $end
+$scope begin NSOL $end
+$scope begin NSL $end
+$upscope $end
+$scope begin OL $end
+$upscope $end
+$upscope $end
+$scope begin PSR $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b0 >
+b1 =
+b11 <
+b10 ;
+$end
+#0
+$dumpvars
+b0 @
+b0 ?
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+0&
+0%
+b0 $
+0#
+0"
+0!
+$end
+#5
+1#
+#10
+0#
+#15
+1#
+#20
+b1 ?
+b1 -
+b1 1
+b1 6
+b1 $
+b1 )
+b1 8
+b111100 .
+b111100 2
+b111100 5
+b111100 '
+b111100 *
+b111100 9
+b1001 ,
+b1001 0
+b1001 7
+b110010 /
+b110010 3
+b110010 4
+b110010 (
+b110010 +
+b110010 :
+1&
+1%
+0#
+#25
+1!
+b1 @
+b1 ?
+1#
+#30
+0#
+#35
+1#
+#40
+b0 ?
+b100 ,
+b100 0
+b100 7
+b111101 /
+b111101 3
+b111101 4
+b111101 (
+b111101 +
+b111101 :
+0#
+#45
+0!
+b0 @
+b0 ?
+1#
+#50
+0#
+#55
+1#
+#60
+b10 ?
+b110 ,
+b110 0
+b110 7
+b1010000 /
+b1010000 3
+b1010000 4
+b1010000 (
+b1010000 +
+b1010000 :
+0#
+#65
+1"
+b10 @
+b10 ?
+1#
+#70
+0#
+#75
+1#
+#80
+b0 ?
+b1000 ,
+b1000 0
+b1000 7
+b111011 /
+b111011 3
+b111011 4
+b111011 (
+b111011 +
+b111011 :
+0#
+#85
+0"
+b0 @
+b0 ?
+1#
+#90
+0#
+#95
+1#
+#100
+0#
